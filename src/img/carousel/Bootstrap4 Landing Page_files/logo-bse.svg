@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="69pt" height="30pt" viewBox="0 0 69 30" version="1.1">
+<defs>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<image id="image7" width="69" height="30" xlink:href="data:image/png;base64,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"/>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<use xlink:href="#image7"/>
+  </g>
+</mask>
+<clipPath id="clip1">
+  <rect x="0" y="0" width="69" height="30"/>
+</clipPath>
+<g id="surface6" clip-path="url(#clip1)">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(34.901961%,61.568627%,87.843137%);fill-opacity:1;" d="M 54.613281 3.695312 C 50.359375 3.6875 46.464844 6.082031 44.539062 9.882812 C 42.617188 6.089844 38.726562 3.699219 34.480469 3.699219 C 30.230469 3.699219 26.34375 6.089844 24.417969 9.882812 C 22.054688 5.21875 16.808594 2.789062 11.734375 4.007812 C 6.65625 5.226562 3.078125 9.773438 3.078125 15.003906 C 3.078125 20.234375 6.65625 24.785156 11.734375 26 C 16.808594 27.21875 22.054688 24.789062 24.417969 20.125 C 26.339844 23.933594 30.234375 26.335938 34.492188 26.335938 C 38.75 26.335938 42.644531 23.933594 44.566406 20.125 C 47.082031 25.085938 52.824219 27.476562 58.105469 25.757812 C 63.386719 24.039062 66.636719 18.726562 65.765625 13.230469 C 64.898438 7.734375 60.167969 3.691406 54.613281 3.695312 Z M 54.613281 3.695312 "/>
+</g>
+</defs>
+<g id="surface1">
+<use xlink:href="#surface6" mask="url(#mask0)"/>
+</g>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function() {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function(msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			console.log('Live reload enabled.');
+		})();
+	}
+	// ]]>
+</script>
+</svg>
