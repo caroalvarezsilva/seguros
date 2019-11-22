@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 17/11/2019 18:25
+  	Creation date: 22/11/2019 21:56
   	*/
 
 @font-face {
@@ -23,9 +23,9 @@
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 60px;
+        font-size: 20px;
 font-style: normal;
 margin-left: 20px;
 }
@@ -42,3 +42,15 @@ margin-left: 20px;
 .flaticon-mail:before { content: "\f109"; }
 .flaticon-facebook:before { content: "\f10a"; }
 .flaticon-instagram:before { content: "\f10b"; }
+.flaticon-rent:before { content: "\f10c"; }
+.flaticon-heart:before { content: "\f10d"; }
+.flaticon-boat:before { content: "\f10e"; }
+.flaticon-work:before { content: "\f10f"; }
+.flaticon-truck:before { content: "\f110"; }
+.flaticon-tractor:before { content: "\f111"; }
+.flaticon-scooter:before { content: "\f112"; }
+.flaticon-bike:before { content: "\f113"; }
+.flaticon-jet-boat:before { content: "\f114"; }
+.flaticon-hurt:before { content: "\f115"; }
+.flaticon-car-1:before { content: "\f116"; }
+.flaticon-taxi:before { content: "\f117"; }

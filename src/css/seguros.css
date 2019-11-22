@@ -1,0 +1,160 @@
+.navbar-custom {
+    background-color: #023a86;
+    color: #FFFFFF;
+}
+
+.image-background {
+  /* The image used */
+  background-image: url('../img/back3.jpg');
+  height: 340px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-cards {
+ font-size: 48px;
+ color: #fff;
+ background-color: rgba(2, 58, 134, .7);
+}
+.car-assurance-icon{
+  font-size: 3.0em;
+}
+.assurance-card-text{
+  font-size: 18px;
+  font-family: 'proxima-nova', sans-serif;
+}
+
+/* CARDS STYLES */
+.card-footer {
+  background-color: #023A86; /azul sura
+}
+
+/* ICONS STYLES */
+.flaticon-travel {
+  color: #FA6400;
+}
+.flaticon-car {
+  color: #E02020;
+}
+.flaticon-home {
+  color: #F7B500;
+}
+.flaticon-rent {
+  color: #6DD400;
+}
+.flaticon-heart {
+  color: #44D7B6;
+}
+.flaticon-boat {
+  color: #32C5FF;
+}
+.flaticon-work {
+  color: #0091FF;
+}
+.flaticon-truck {
+  color: #220CF9;
+}
+.flaticon-tractor {
+  color: #B620E0;
+}
+.flaticon-scooter {
+  color: #E91E63;
+}
+.flaticon-bike {
+  color: #7E00FC;
+}
+.flaticon-jet-boat {
+  color: #DACC00;
+}
+.flaticon-hurt {
+  color: #FA64FF;
+}
+.flaticon-car-1 {
+  color: #6D7278;
+}
+.flaticon-taxi {
+  color: #623677;
+}
+
+
+.flaticon-plus {
+  color: #023A86;
+}
+.more-cards {
+  color: #023A86;
+}
+
+/* BACKGROUND GREY */
+.background-grey {
+  background-color: #D9D8D8;
+}
+
+.background-grey-dark {
+  background-color: #D9D8D8;
+}
+
+.background-height {
+    height: 780px;
+}
+
+/* QUE HACER EN CASO DE ACCIDENTE  */
+.accident-legend {
+    background-color: #34AEEB;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+
+.footer {
+  background-color: #6D7278;
+}
+
+.flaticon-footer:before {
+    font-size: 20px !important;
+}
+
+.grid-column-seguros {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.header-grey {
+  height: 200px;
+  margin-left: 0;
+
+}
+
+.seguros-grid {
+  margin-top:-840px;
+}
+
+.card-icon::before {
+  margin-left: 0px;
+  padding-right: 20px;
+  font-size: 50px!important;
+}
+
+.card-body {
+  padding:1rem;
+}
+
+@media (min-width:993px)  {
+    .background-height {
+        height: 100px;
+      }
+    }
+
+
+@media (min-width:762px) and  (max-width:992px){
+  .background-height {
+      height: 300px;
+    }
+  }
+
+}

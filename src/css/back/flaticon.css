@@ -1,9 +1,9 @@
-    /*
-    Flaticon icon font: Flaticon
-    Creation date: 22/11/2019 21:56
-    */
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/11/2019 21:43
+  	*/
 
-    @font-face {
+@font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
@@ -22,22 +22,15 @@
   }
 }
 
-    .fi:before{
-        display: inline-block;
-  font-family: "Flaticon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-    }
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+        font-size: 60px;
+font-style: normal;
+margin-left: 20px;
+}
 
-    .flaticon-home:before { content: "\f100"; }
+.flaticon-home:before { content: "\f100"; }
 .flaticon-car:before { content: "\f101"; }
 .flaticon-travel:before { content: "\f102"; }
 .flaticon-plus:before { content: "\f103"; }
@@ -61,28 +54,3 @@
 .flaticon-hurt:before { content: "\f115"; }
 .flaticon-car-1:before { content: "\f116"; }
 .flaticon-taxi:before { content: "\f117"; }
-    
-    $font-Flaticon-home: "\f100";
-    $font-Flaticon-car: "\f101";
-    $font-Flaticon-travel: "\f102";
-    $font-Flaticon-plus: "\f103";
-    $font-Flaticon-document: "\f104";
-    $font-Flaticon-phone: "\f105";
-    $font-Flaticon-tick: "\f106";
-    $font-Flaticon-map: "\f107";
-    $font-Flaticon-phone-1: "\f108";
-    $font-Flaticon-mail: "\f109";
-    $font-Flaticon-facebook: "\f10a";
-    $font-Flaticon-instagram: "\f10b";
-    $font-Flaticon-rent: "\f10c";
-    $font-Flaticon-heart: "\f10d";
-    $font-Flaticon-boat: "\f10e";
-    $font-Flaticon-work: "\f10f";
-    $font-Flaticon-truck: "\f110";
-    $font-Flaticon-tractor: "\f111";
-    $font-Flaticon-scooter: "\f112";
-    $font-Flaticon-bike: "\f113";
-    $font-Flaticon-jet-boat: "\f114";
-    $font-Flaticon-hurt: "\f115";
-    $font-Flaticon-car-1: "\f116";
-    $font-Flaticon-taxi: "\f117";
