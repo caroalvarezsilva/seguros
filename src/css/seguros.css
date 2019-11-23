@@ -144,6 +144,10 @@
   padding:1rem;
 }
 
+.seguros-grid .grid-column-seguros .card-body h5 {
+  height: 50px;
+}
+
 @media (min-width:993px)  {
     .background-height {
         height: 100px;
