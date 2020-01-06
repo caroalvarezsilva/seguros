@@ -120,8 +120,8 @@
 }
 
 .grid-column-seguros {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 
 .header-grey {
@@ -147,9 +147,15 @@
   height: 50px;
 }
 
+
+
 @media (min-width:993px)  {
     .background-height {
         height: 100px;
+      }
+      .all-assurance-padding {
+        margin-left: 60px;
+        margin-right: 60px;
       }
     }
 
@@ -160,4 +166,8 @@
     }
   }
 
+@media  (min-width:344px){
+  .all-assurance-title {
+    padding-top: 30px;
+  }
 }

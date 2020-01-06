@@ -3,6 +3,9 @@
     color: #FFFFFF;
 }
 
+.navbar-nav .nav-item .nav-link {
+    color: #FFFFFF;
+}
 .image-background {
   /* The image used */
   background-image: url('../img/background.jpg');
@@ -48,7 +51,7 @@
 }
 .btn-cotizar {
   color: white;
-  font-weight:300;
+  font-weight:400;
 }
 .btn-cotizar:hover {
   color: white;
@@ -67,8 +70,12 @@
  color: #023A86;
 }
 
-
-
+.card-body a:hover {
+  text-decoration: none;
+}
+.card-body-more {
+  font-size: 20px;
+}
 /* BACKGROUND GREY */
 .background-grey {
   background-color: #F4F4F4;
@@ -76,11 +83,6 @@
 
 .background-height {
     height: 900px;
-}
-
-/* QUE HACER EN CASO DE ACCIDENTE  */
-.accident-legend {
-    background-color: #34AEEB;
 }
 
 .item img {
@@ -104,26 +106,77 @@
   height: 500px;
 }
 
+.facebook-icon {
+  color:black;
+}
+.facebook-icon:hover {
+  color:#023A86;
+  text-decoration: none;
+}
+
+.clickable {
+  background-color: #34AEEB;
+}
+.clickable a:hover {
+  text-decoration: none;
+}
+.clickable:hover {
+  box-shadow: 0px 0px 60px rgba(0,0,0,0.2);
+  transition: ease 0.35s;
+  cursor: pointer;
+}
+
+.description {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.35;
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    color: #404041;
+    font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.page-title {
+    font-weight: 300;
+    font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.container-siniestro {
+
+    max-width: 1232px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 40px;
+
+}
 /* large */
 @media (min-width:993px)  {
     .background-height {
-        height: 94px;
+        height: 116px;
       }
     .footer-background {
       background-color: #F4F4F4;
-      height: 300px;
+      height: 350px;
     }
 }
 
 /* medium */
 @media (min-width:762px) and  (max-width:992px){
   .background-height {
-      height: 300px;
+      height: 400px;
     }
 
   .footer-background {
     background-color: #F4F4F4;
     height: 350px;
+  }
+}
+
+@media (max-width:576px){
+  .main-header {
+    height: 1510px;
+  }
+  .background-height {
+      height: 1000px;
   }
 }
 
