@@ -17,6 +17,7 @@
 <body>
 
     <div id="header"></div>
+    <form id="contact">
     <div class="page-wrapper p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w680">
             <div class="card card-1">
@@ -28,23 +29,23 @@
                         <div class="row row-space">
                             <div class="col-6">
                               <div class="input-group">
-                                  <input class="input--style-1" type="text" placeholder="Marca" name="name">
+                                  <input class="input--style-1" type="text" placeholder="Marca" id="form-brand">
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="input-group">
-                                  <input class="input--style-1" type="text" placeholder="Modelo" name="name">
+                                  <input class="input--style-1" type="text" placeholder="Modelo" id="form-model">
                               </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-6">
                               <div class="input-group">
-                                  <input class="input--style-1" type="text" placeholder="Año" name="name">
+                                  <input class="input--style-1" type="text" placeholder="Año" id="form-year">
                               </div>
                             </div>
                             <div class="col-6">
-                              <select name="cobertura" class="custom-select">
+                              <select name="cobertura" class="custom-select" id="form-coverage">
                                     <option selected>Cobertura</option>
                                     <option>Total plus</option>
                                     <option>Total</option>
@@ -57,15 +58,27 @@
                         </div>
                         <div class="row row-space">
                           <div class="col-6">
-                            <select name="zone" class="custom-select">
+                            <select name="zone" class="custom-select" id="form-department">
                                   <option disabled="disabled" selected="selected">Zona de circulación</option>
                                   <option>Montevideo</option>
                                   <option>Canelones</option>
                                   <option>Maldonado</option>
+                                  <option>Artigas</option>
+                                  <option>Cerro Largo</option>
                                   <option>Colonia</option>
-                                  <option>Salto</option>
+                                  <option>Durazno</option>
+                                  <option>Flores</option>
+                                  <option>Florida</option>
+                                  <option>Lavalleja</option>
                                   <option>Paysandú</option>
-                                  <option>Total</option>
+                                  <option>Río Negro</option>
+                                  <option>Rivera</option>
+                                  <option>Rocha</option>
+                                  <option>Salto</option>
+                                  <option>San José</option>
+                                  <option>Soriano</option>
+                                  <option>Tacuarembó</option>
+                                  <option>Treinta y Tres</option>
                               </select>
                           </div>
                         </div>
@@ -84,25 +97,25 @@
                         <div class="row row-space">
                             <div class="col-6">
                               <div class="input-group">
-                                  <input class="input--style-1" type="text" placeholder="Nombre" name="name">
+                                  <input class="input--style-1" type="text" placeholder="Nombre" id="form-name">
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="input-group">
-                                  <input class="input--style-1" type="text" placeholder="Apellido" name="name">
+                                  <input class="input--style-1" type="text" placeholder="Apellido" id="form-lastname">
                               </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-6">
                               <div class="input-group">
-                                  <input class="input--style-1" type="text" placeholder="Celular" name="name">
+                                  <input class="input--style-1" type="text" placeholder="Celular" id="form-cellphone">
                               </div>
                             </div>
                             <div class="col-6">
 
                                 <div class="input-group">
-                                    <input class="input--style-1" type="text" placeholder="Email" name="name">
+                                    <input class="input--style-1" type="text" placeholder="Email" id="form-email">
                                 </div>
 
                           </div>
@@ -111,7 +124,7 @@
                           <div class="col-6">
 
                               <div class="input-group">
-                                  <input class="input--style-1" type="text" placeholder="Cédula de identidad" name="name">
+                                  <input class="input--style-1" type="text" placeholder="Cédula de identidad" id="form-ci">
                               </div>
 
                           </div>
@@ -129,14 +142,16 @@
               Cancelar
             </a>
         </div>
+      </form>
     </div>
 
     <div id="footer"></div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../../js/sendMailMotobikeForm.js"></script>
+    <script src="../../js/sendMailContactForm.js"></script>
     <script>
     $(function(){
      $("#footer").load("../footer.html");
