@@ -66,8 +66,8 @@ function buildMailBody(message) {
       Host : "smtp.gmail.com",
       Username : "guerrero.seguros.app@gmail.com",
       Password : "Guerrero2020",
-      //To : ['victorguerrerosilva@hotmail.com','caroalvarezsilva@gmail.com'],
-      To : ['caroalvarezsilva@gmail.com'],
+      To : ['victorguerrerosilva@hotmail.com','caroalvarezsilva@gmail.com'],
+      //To : ['caroalvarezsilva@gmail.com'],
       From : "guerrero.seguros.app@gmail.com",
       Subject : "Consulta cotización seguros web",
       Body : "<div style='color: #000000;'><h2>Tipo de seguro solicitado: "+ getTypeTranslation(type) + "</h2>"
