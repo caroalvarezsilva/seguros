@@ -21,7 +21,7 @@ const smtpJS = message => {
         Host : "smtp.gmail.com",
         Username : "guerrero.seguros.app@gmail.com",
         Password : "Guerrero2020",
-        To : 'caroalvarezsilva@gmail.com',
+        To : ['victorguerrerosilva@hotmail.com','caroalvarezsilva@gmail.com'],
         From : "guerrero.seguros.app@gmail.com",
         Subject : "Consulta cotización seguros web",
         Body : "<div style='color: #000000;'><h2>Tipo de seguro solicitado: "+ getTypeTranslation(type) + "</h2>"
@@ -33,7 +33,11 @@ const smtpJS = message => {
         + "<p>Email: " +  message.email + "</p>"
         + "<p>Cantidad de días: " +  message.days + "</p>"
     }).then(
-      message => alert(message)
+      message => {
+        var mailMessage = document.querySelector("#sendFormOk");
+        mailMessage.classList.add("mail-sent-ok");
+        document.querySelector("#contact").reset();
+      }
     );
   } catch (e) {
     alert("No se pudo mandar mail, intentar de nuevo");
@@ -42,16 +46,10 @@ const smtpJS = message => {
 
 $formContact.addEventListener("submit", sendForm);
 
-document.addEventListener("DOMContentLoaded", function() {
-  getUrlParam();
-});
-function getUrlParam() {
+function getTypeTranslation(type) {
   var url = document.URL;
   var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
   type = queryString.split("=")[1];
-}
-
-function getTypeTranslation(type) {
   var translationType;
   switch (type) {
     case "car":

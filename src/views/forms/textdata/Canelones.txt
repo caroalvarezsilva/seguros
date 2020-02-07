@@ -1,0 +1,74 @@
+<option>Aeropuerto</option>
+<option>Aguas Corrientes</option>
+<option>Médanos de Solymar</option>
+<option>Migues</option>
+<option>Montes</option>
+<option>Neptunia</option>
+<option>Pando</option>
+<option>Parque Carrasco</option>
+<option>Parque Del Plata</option>
+<option>Paso de Carrasco</option>
+<option>Paso de Pache</option>
+<option>Paso del Bote</option>
+<option>Piedras de Afilar</option>
+<option>Pinamar</option>
+<option>Pine Park</option>
+<option>Progreso</option>
+<option>Salinas</option>
+<option>San Antonio</option>
+<option>San Bautista</option>
+<option>San Jacinto</option>
+<option>San Jose De Carrasco</option>
+<option>San Luis</option>
+<option>San Ramon</option>
+<option>Santa Ana</option>
+<option>Santa Lucia</option>
+<option>Santa Lucía del Este</option>
+<option>Santa Rosa</option>
+<option>Sauce</option>
+<option>Shangrila</option>
+<option>Soca</option>
+<option>Solymar</option>
+<option>Tala</option>
+<option>Toledo</option>
+<option>Villa Argentina</option>
+<option>Villa del Mar</option>
+<option>Canelones</option>
+<option>Araminda</option>
+<option>Argentino</option>
+<option>Atlántida</option>
+<option>Barra de carrasco</option>
+<option>Barros Blancos</option>
+<option>Bello Horizonte</option>
+<option>Biarritz</option>
+<option>Bolívar</option>
+<option>Campo Militar</option>
+<option>Canelón Grande Represa</option>
+<option>Castellanos</option>
+<option>Colonia Nicolich</option>
+<option>Costa Azul</option>
+<option>Cuchilla Alta</option>
+<option>El Bosque</option>
+<option>El Dorado</option>
+<option>El Fortín de Santa Rosa</option>
+<option>El Pinar</option>
+<option>Empalme Olmos</option>
+<option>Estación Migues</option>
+<option>Marindia</option>
+<option>Estación Pedrera</option>
+<option>Estación Tapia</option>
+<option>Guazuvirá</option>
+<option>Guazuvirá Nuevo</option>
+<option>Jaureguiberry</option>
+<option>Joanicó</option>
+<option>Joaquín Suárez</option>
+<option>La Floresta</option>
+<option>La Paz</option>
+<option>La Tuna</option>
+<option>Lagomar</option>
+<option>Las Piedras</option>
+<option>Las Toscas</option>
+<option>Las Vegas</option>
+<option>Lomas de Solymar</option>
+<option>Los Cerrillos</option>
+<option>Los Titanes</option>

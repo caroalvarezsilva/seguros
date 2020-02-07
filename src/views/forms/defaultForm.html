@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Seguros online Guerrero e hijos</title>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/flaticon/flaticon.css">
     <link href="../../css/mainForm.css" rel="stylesheet" media="all">
     <link href="../../css/main.css" rel="stylesheet" media="all">
+    <link rel="icon" href="../../img/logo-blue.jpg">
 </head>
 
 <body>
@@ -30,24 +32,24 @@
                     <div class="row row-space">
                         <div class="col-6">
                           <div class="input-group">
-                              <input class="input--style-1" type="text" placeholder="Nombre" id="form-name">
+                              <input class="input--style-1" type="text" placeholder="Nombre" id="form-name" required>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="input-group">
-                              <input class="input--style-1" type="text" placeholder="Apellido" id="form-lastname">
+                              <input class="input--style-1" type="text" placeholder="Apellido" id="form-lastname" required>
                           </div>
                         </div>
                     </div>
                     <div class="row row-space">
                         <div class="col-6">
                           <div class="input-group">
-                              <input class="input--style-1" type="text" placeholder="Celular" id="form-cellphone">
+                              <input class="input--style-1" type="text" placeholder="Celular" id="form-cellphone" required>
                           </div>
                         </div>
                         <div class="col-6">
                           <div class="input-group">
-                              <input class="input--style-1" type="text" placeholder="Email" id="form-email">
+                              <input class="input--style-1" type="text" placeholder="Email" id="form-email" required>
                           </div>
                         </div>
                     </div>
@@ -58,9 +60,10 @@
           <div class="p-t-20 d-inline-block">
               <button class="btn btn--radius btn-color font-weigth-ligth" type="submit">Enviar</button>
           </div>
-          <a href="/src/views/index.html" class="d-inline-block color-blue font-weigth-ligth ml-3">
+          <a href="/index.html" class="d-inline-block color-blue font-weigth-ligth ml-3">
             Cancelar
           </a>
+          <div id="sendFormOk" class="col mt-3 display-none" role="alert">Su mensaje fue enviado. <br >Muchas gracias por comunicarse con Guerrero Seguro.</div>
           </form>
       </div>
     </div>
@@ -73,7 +76,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="../../js/sendMailDefaultForm.js"></script>
-    <script src="../../js/sendMailContactForm.js"></script>
     <script>
     $(function(){
      $("#footer").load("../footer.html");

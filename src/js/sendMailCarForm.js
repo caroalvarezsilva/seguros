@@ -1,7 +1,28 @@
 const $formContact = document.querySelector("#contact");
 var type = "autos";
+
 const sendForm = event => {
+  var reader = new FileReader();
+  var dataUri;
   event.preventDefault();
+    if (document.querySelector("#file").files.length > 0) {
+      file = document.querySelector("#file").files[0];
+      reader.readAsBinaryString(file);
+
+      reader.onload = function () {
+              dataUri = "data:" + file.type + ";base64," + btoa(reader.result);
+              sendMail(dataUri)
+      };
+      reader.onerror = function() {
+         console.log('No se pudo adjuntar la imágen');
+      };
+    }
+    else {
+      sendMail(null)
+    }
+}
+
+function sendMail(dataUri) {
   const message = {
     brand: document.querySelector("#form-brand").value,
     model: document.querySelector("#form-model").value,
@@ -14,55 +35,74 @@ const sendForm = event => {
     cellphone: document.querySelector("#form-cellphone").value,
     email: document.querySelector("#form-email").value,
     ci: document.querySelector("#form-ci").value,
-
+    data: dataUri
   };
   smtpJS(message);
-};
+}
 
 const smtpJS = message => {
   try {
-    Email.send({
-        // Host : "smtp.elasticemail.com",
-        Host : "smtp.gmail.com",
-        Username : "guerrero.seguros.app@gmail.com",
-        Password : "Guerrero2020",
-        To : 'caroalvarezsilva@gmail.com',
-        From : "guerrero.seguros.app@gmail.com",
-        Subject : "Consulta cotización seguros web",
-        Body : "<div style='color: #000000;'><h2>Tipo de seguro solicitado: "+ getTypeTranslation(type) + "</h2>"
-        + "<h3>Datos del auto</h3>"
-        + "<p>Marca: " +  message.brand + "</p>"
-        + "<p>Modelo: " +  message.model + "</p>"
-        + "<p>Cobertura: " +  message.coverage + "</p>"
-        + "<p>Zona de circulaci&oacute;n: " +  message.department + "</p>"
-        + "<p>Tipo de uso: "+ message.usage + "</p>"
-        + "<p>&nbsp;</p>"
-        + "<h3>Datos personales</h3>"
-        + "<p>Nombre: " +  message.name + "</p>"
-        + "<p>Apellido: " +  message.lastname + "<p>"
-        + "<p>Celular: " +  message.cellphone + "</p>"
-        + "<p>Email: " +  message.email + "</p>"
-        + "<p>C&eacute;dula de identidad: "+  message.ci + "</p></div>"
-    }).then(
-      message => alert(message)
+    var body = buildMailBody(message);
+    if (message.data != null) {
+      attachment = appendAttachment(message);
+      body["Attachments"] = attachment;
+    }
+
+    Email.send(body).then(
+      message => {
+      var mailMessage = document.querySelector("#sendFormOk");
+      mailMessage.classList.add("mail-sent-ok");
+      document.querySelector("#contact").reset();
+    }
     );
   } catch (e) {
     alert("No se pudo mandar mail, intentar de nuevo");
   }
 };
 
+function buildMailBody(message) {
+  return {
+      // Host : "smtp.elasticemail.com",
+      Host : "smtp.gmail.com",
+      Username : "guerrero.seguros.app@gmail.com",
+      Password : "Guerrero2020",
+      //To : ['victorguerrerosilva@hotmail.com','caroalvarezsilva@gmail.com'],
+      To : ['caroalvarezsilva@gmail.com'],
+      From : "guerrero.seguros.app@gmail.com",
+      Subject : "Consulta cotización seguros web",
+      Body : "<div style='color: #000000;'><h2>Tipo de seguro solicitado: "+ getTypeTranslation(type) + "</h2>"
+      + "<h3>Datos del auto</h3>"
+      + "<p>Marca: " +  message.brand + "</p>"
+      + "<p>Modelo: " +  message.model + "</p>"
+      + "<p>Año: " +  message.year + "</p>"
+      + "<p>Cobertura: " +  message.coverage + "</p>"
+      + "<p>Zona de circulaci&oacute;n: " +  message.department + "</p>"
+      + "<p>Localidad: " +  message.zonelocal + "</p>"
+      + "<p>Tipo de uso: "+ message.usage + "</p>"
+      + "<p>&nbsp;</p>"
+      + "<h3>Datos personales</h3>"
+      + "<p>Nombre: " +  message.name + "</p>"
+      + "<p>Apellido: " +  message.lastname + "<p>"
+      + "<p>Celular: " +  message.cellphone + "</p>"
+      + "<p>Email: " +  message.email + "</p>"
+      + "<p>C&eacute;dula de identidad: "+  message.ci + "</p></div>"
+    }
+}
+
+function appendAttachment(message, body) {
+  return [
+        {
+          name : "libreta_del_vehiculo.png",
+          data : message.data
+        }]
+  }
+
 $formContact.addEventListener("submit", sendForm);
 
-document.addEventListener("DOMContentLoaded", function() {
-  getUrlParam();
-});
-function getUrlParam() {
+function getTypeTranslation(type) {
   var url = document.URL;
   var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
   type = queryString.split("=")[1];
-}
-
-function getTypeTranslation(type) {
   var translationType;
   switch (type) {
     case "car":
@@ -115,4 +155,18 @@ function getTypeTranslation(type) {
 
   }
   return translationType;
+}
+
+function getBase64(file) {
+   var reader = new FileReader();
+   reader.readAsDataURL(file);
+   reader.onload = function () {
+     console.log(reader.result);
+     return reader.result;
+   };
+   reader.onerror = function (error) {
+     console.log('Error: ', error);
+     return "";
+   };
+
 }

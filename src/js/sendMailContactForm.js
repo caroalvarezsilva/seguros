@@ -1,5 +1,4 @@
 const $formGeneralContact = document.querySelector("#general-contact");
-var type = "viaje";
 const sendGeneralForm = event => {
   event.preventDefault();
   const message = {
@@ -10,20 +9,29 @@ const sendGeneralForm = event => {
 };
 
 const smtpJSContact = message => {
+  var spinner = document.querySelector("#spinner");
+  //spinner.classList.remove("visibility-hidden");
+  spinner.classList.add("visibility-show");
   try {
     Email.send({
         // Host : "smtp.elasticemail.com",
         Host : "smtp.gmail.com",
         Username : "guerrero.seguros.app@gmail.com",
         Password : "Guerrero2020",
-        To : 'caroalvarezsilva@gmail.com',
+        To : ['victorguerrerosilva@hotmail.com','caroalvarezsilva@gmail.com'],
         From : "guerrero.seguros.app@gmail.com",
         Subject : "Consulta cotización seguros web",
         Body : "<div style='color: #000000;'><h2>Consulta cotización seguro</h2>"
         + "<p>Nombre: " +  message.name + "</p>"
         + "<p>Mensaje: " +  message.message + "<p>"
     }).then(
-      message => alert(message)
+      message => {
+      spinner.classList.add("visibility-no-show");
+      var mailMessage = document.querySelector("#sendContactMailOk");
+      spinner.classList.add("visibility-hidden");
+      document.querySelector("#general-contact").reset();
+      mailMessage.classList.add("mail-sent-ok");
+      }
     );
   } catch (e) {
     alert("No se pudo mandar mail, intentar de nuevo");
@@ -31,13 +39,3 @@ const smtpJSContact = message => {
 };
 
 $formGeneralContact.addEventListener("submit", sendGeneralForm);
-
-document.addEventListener("DOMContentLoaded", function() {
-  getUrlParam();
-});
-
-function getUrlParam() {
-  var url = document.URL;
-  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
-  type = queryString.split("=")[1];
-}
